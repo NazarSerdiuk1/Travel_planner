@@ -15,7 +15,7 @@ class TravelProjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Travel_Project
-        fields = ["id", "name", "description", "start_date", "is_completed"]
+        fields = ["id", "name", "description", "start_date", "is_completed", "places"]
 
 
 class ProjectCreateSerializer(serializers.ModelSerializer):
@@ -23,7 +23,7 @@ class ProjectCreateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Travel_Project
-        fields = ["id", "name", "description", "start_date", "is_completed"]
+        fields = ["id", "name", "description", "start_date", "is_completed", "places"]
     
     def create(self, validated_data):
         places_data = validated_data.pop("places")

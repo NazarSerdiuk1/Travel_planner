@@ -21,5 +21,6 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, Sp
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("travel_planner/",include("travel_planner.urls", namespace="travel_planner")),
+    path("travel_planner/", include("travel_planner.urls", namespace="travel_planner")),
+
 ]
